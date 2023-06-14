@@ -1,0 +1,16 @@
+.content_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 11px;
+  grid-row-gap: 20px;
+  .content_boxContent {
+    text-align: center;
+    img {
+      border-radius: 50px;
+    }
+    p {
+      padding: 0 20px;
+    }
+  }
+}
