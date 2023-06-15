@@ -1,15 +1,15 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "../../redux/slices/countSlice";
+// import { useSelector, useDispatch } from "react-redux";
+// import { decrement, increment } from "../../redux/slices/countSlice";
 
-import Logo from "../../assets/img/serhii.jpg";
+import Logo from "../../assets/img/logo.jpg";
 import Photo from "../../assets/img/serhii.jpg";
 
 import styles from "./header.module.scss";
 
 const Header = () => {
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  // const count = useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch();
   return (
     <>
       <div className={styles.header_top}>
@@ -18,26 +18,34 @@ const Header = () => {
         </div>
         <h1>Portfolio SHM</h1>
         <div className={styles.header_list}>
-          <li>
-            <ul>+380966265268</ul>
-            <ul>shmserhi@gmail.com</ul>
-            <ul>
+          <ul>
+            <li>
+              <img
+                src="https://img.icons8.com/ios-filled/256/phone.png"
+                alt="email"
+              />
+              +380966265268
+            </li>
+            <li>
+              <img
+                src="https://img.icons8.com/external-nawicon-glyph-nawicon/256/external-email-communication-nawicon-glyph-nawicon.png"
+                alt="phone"
+              />
+              shmserhi@gmail.com
+            </li>
+            <li>
+              <img
+                src="https://img.icons8.com/?size=512&id=12599&format=png"
+                alt="gitHub"
+              />
               <a href="https://github.com/Serhii-Shmyhelskyi">github</a>
-            </ul>
-          </li>
+            </li>
+          </ul>
           <img width={120} src={Photo} alt="Serhii's photo" />
         </div>
       </div>
-      <div className={styles.header_text}>
-        <h2>Serhii Shmyhelskyi</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tenetur
-          ab voluptatem quis excepturi saepe, velit quia delectus fugit a porro
-          architecto ipsam cupiditate vitae tempora corporis, nihil consequatur
-          aliquam.
-        </p>
-      </div>
-      <div>
+     
+      {/* <div>
         <div>
           <button
             aria-label="Increment value"
@@ -51,7 +59,7 @@ const Header = () => {
             Decrement
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

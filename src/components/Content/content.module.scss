@@ -4,13 +4,40 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 11px;
   grid-row-gap: 20px;
+
   .content_boxContent {
     text-align: center;
-    img {
-      border-radius: 50px;
+    height: 340px;
+    h3 {
+      margin-bottom: 10px;
     }
-    p {
+    a {
+      img {
+        border-radius: 50px;
+        width: 340px;
+        height: 180px;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .content_boxText {
       padding: 0 20px;
+      background-color: #f6f6f6d6;
+      border-radius: 10px;
+      width: 370px;
     }
+  }
+}
+
+.content_topText {
+  h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 20px;
   }
 }

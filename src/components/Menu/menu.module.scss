@@ -1,0 +1,30 @@
+.menu {
+  margin: 20px 0;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 140px;
+      height: 40px;
+      text-align: center;
+      background-color: #f6f6f6d6;
+      margin: 0 20px 0 0;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      &:hover {
+        background-color: darken(#cdd3d2dc, 2%);
+      }
+      &.active {
+        background-color: #3a3939;
+        color: #fff;
+      }
+
+      h3 {
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+}
