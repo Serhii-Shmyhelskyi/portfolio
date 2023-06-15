@@ -1,6 +1,4 @@
 import React from "react";
-// import { useSelector, useDispatch } from "react-redux";
-// import { decrement, increment } from "../../redux/slices/countSlice";
 
 import Logo from "../../assets/img/logo.jpg";
 import Photo from "../../assets/img/serhii.jpg";
@@ -8,8 +6,6 @@ import Photo from "../../assets/img/serhii.jpg";
 import styles from "./header.module.scss";
 
 const Header = () => {
-  // const count = useSelector((state) => state.counter.value);
-  // const dispatch = useDispatch();
   return (
     <>
       <div className={styles.header_top}>
@@ -44,22 +40,6 @@ const Header = () => {
           <img width={120} src={Photo} alt="Serhii's photo" />
         </div>
       </div>
-     
-      {/* <div>
-        <div>
-          <button
-            aria-label="Increment value"
-            onClick={() => dispatch(increment())}>
-            Increment
-          </button>
-          <span>{count}</span>
-          <button
-            aria-label="Decrement value"
-            onClick={() => dispatch(decrement())}>
-            Decrement
-          </button>
-        </div>
-      </div> */}
     </>
   );
 };

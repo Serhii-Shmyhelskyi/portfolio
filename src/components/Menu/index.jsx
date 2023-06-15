@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setCategoryId } from "../../redux/slices/menuSlice";
 
 import styles from "./menu.module.scss";
 
-const menu = ["Home", "Blog", "About me", "Contacts"];
+const menuArr = ["Home", "Blog", "About me", "Contacts"];
 
 const Menu = () => {
-  const [value, setValue] = useState(0);
-  const onChangeCategory = function (value) {
-    setValue(value);
-  };
+  const menuState = useSelector((state) => state.menu.value);
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.menu}>
       <ul>
-        {menu.map((obj, i) => {
+        {menuArr.map((obj, i) => {
           return (
             <li
               key={i}
-              onClick={() => onChangeCategory(i)}
-              className={value === i ? `${styles.active}` : ""}>
+              onClick={() => dispatch(setCategoryId(i))}
+              className={menuState === i ? `${styles.active}` : ""}>
               <h3>{obj}</h3>
             </li>
           );

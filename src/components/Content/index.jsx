@@ -61,9 +61,9 @@ const index = () => {
       </div>
 
       <div className={styles.content_box}>
-        {a.map((obj) => {
+        {a.map((obj, i) => {
           return (
-            <div className={styles.content_boxContent}>
+            <div key={i} className={styles.content_boxContent}>
               <h3>{obj.name}</h3>
               <a href={obj.siteUrl}>
                 <img src={obj.photo} alt="Photo site" />
