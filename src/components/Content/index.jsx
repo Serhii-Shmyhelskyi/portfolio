@@ -1,53 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { fetchContent } from "../../redux/slices/contentSlice";
 
 import styles from "./content.module.scss";
-import imageSite1 from "../../assets/img/imageSite1.jpg";
-import imageSite2 from "../../assets/img/imageSite2.jpg";
-import imageSite3 from "../../assets/img/imageSite3.jpg";
-import imageSite4 from "../../assets/img/imageSite4.jpg";
-import imageSite5 from "../../assets/img/imageSite5.jpg";
-import imageSite6 from "../../assets/img/imageSite6.jpg";
-
-let a = [
-  {
-    name: "Kyiv",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/react-kyiv/",
-    photo: `${imageSite1}`,
-    text: "ReactJS 18, Redux Toolkit 1.9.3, React Router 6.8.1, TypeScript, Prettier, SCSS",
-  },
-  {
-    name: "Varenuk",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/react-varenuk/",
-    photo: `${imageSite2}`,
-    text: "ReactJS 18, Redux Toolkit 1.9.3, TypeScript, React Router 6.8.1, Axios + Fetch, React Hooks, Prettier, SCSS",
-  },
-  {
-    name: "Sneakers",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/react-sneakers/",
-    photo: `${imageSite3}`,
-    text: "ReactJS 18, React Router v6, Axios + Fetch, React Hooks, React Context, Prettier, SCSS",
-  },
-  {
-    name: "Metro",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/metro-js-array/",
-    photo: `${imageSite4}`,
-    text: "JS, CSS, JS Array, Git",
-  },
-  {
-    name: "Surf",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/surf/app/index.html",
-    photo: `${imageSite5}`,
-    text: "JS, SCSS, CSS Animations, Gulpf, Git",
-  },
-  {
-    name: "Hungry-menu",
-    siteUrl: "https://serhii-shmyhelskyi.github.io/hungry-menu/app/index.html",
-    photo: `${imageSite6}`,
-    text: "JS, SCSS, CSS Animations, Gulpf, Git",
-  },
-];
 
 const index = () => {
+  const contentState = useSelector((state) => state.content.itemContents);
+
+  const dispatch = useDispatch();
+
+  const getContent = async () => {
+    try {
+      dispatch(fetchContent());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getContent();
+  }, []);
+
   return (
     <>
       <div className={styles.content_topText}>
@@ -61,7 +35,7 @@ const index = () => {
       </div>
 
       <div className={styles.content_box}>
-        {a.map((obj, i) => {
+        {contentState.map((obj, i) => {
           return (
             <div key={i} className={styles.content_boxContent}>
               <h3>{obj.name}</h3>

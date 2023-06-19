@@ -5,7 +5,7 @@ import { setCategoryId } from "../../redux/slices/menuSlice";
 
 import styles from "./menu.module.scss";
 
-const menuArr = ["Home", "Blog", "About me", "Contacts"];
+const menuArr = ["Home", "About me", "Blog", "Contacts"];
 
 const Menu = () => {
   const menuState = useSelector((state) => state.menu.value);
