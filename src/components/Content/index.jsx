@@ -1,18 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fetchContent } from "../../redux/slices/contentSlice";
 
 import styles from "./content.module.scss";
+import { Pagination } from "../Pagination";
 
 const index = () => {
-  const contentState = useSelector((state) => state.content.itemContents);
+  const [currentPage, setCurrentPage] = useState(1);
+  const contentState = useSelector((state) => state.content.items);
 
   const dispatch = useDispatch();
 
   const getContent = async () => {
     try {
-      dispatch(fetchContent());
+      dispatch(fetchContent({ currentPage }));
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +22,7 @@ const index = () => {
 
   useEffect(() => {
     getContent();
-  }, []);
+  }, [currentPage]);
 
   return (
     <>
@@ -50,6 +52,10 @@ const index = () => {
           );
         })}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        onChangePage={(number) => setCurrentPage(number)}
+      />
     </>
   );
 };
