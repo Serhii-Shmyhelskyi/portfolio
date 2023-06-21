@@ -31,17 +31,17 @@ const contentSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchContent.pending, (state) => {
-      state.status = "Status.LOADING";
+      state.status = "LOADING";
       state.items = [];
       state.pagination = 0;
     });
     builder.addCase(fetchContent.fulfilled, (state, action) => {
       state.items = action.payload.data;
       state.pagination = action.payload.pagination;
-      state.status = "Status.SUCCESS";
+      state.status = "SUCCESS";
     });
     builder.addCase(fetchContent.rejected, (state) => {
-      state.status = "Status.ERROR";
+      state.status = "ERROR";
       state.items = [];
       state.pagination = 0;
     });

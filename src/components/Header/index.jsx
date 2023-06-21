@@ -37,7 +37,9 @@ const Header = () => {
               <a href="https://github.com/Serhii-Shmyhelskyi">github</a>
             </li>
           </ul>
-          <img width={120} src={Photo} alt="Serhii's photo" />
+          <a href="https://github.com/Serhii-Shmyhelskyi">
+            <img width={120} src={Photo} alt="Serhii's photo" />
+          </a>
         </div>
       </div>
     </>

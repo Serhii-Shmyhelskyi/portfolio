@@ -9,8 +9,8 @@ const App = () => {
   return (
     <div className="wrapper">
       <Header />
-      <Menu />
       <div className="container">
+        <Menu />
         <Content />
       </div>
     </div>
