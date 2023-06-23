@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
-import { store } from "./redux/store";
+import { createRoot } from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import App from "./App.jsx";
+import { store } from "./redux/store";
+import { router } from "./components/Router/routes";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />
+    <RouterProvider router={router} />
   </Provider>
 );

@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchContent } from "../../redux/slices/contentSlice";
 
 import styles from "./content.module.scss";
-import { Pagination } from "../Pagination";
-import { Skeleton } from "../Skeleton/Skeleton";
+import { Pagination } from "../../components/Pagination";
+import { Skeleton } from "../../components/Skeleton/Skeleton";
 
 const index = () => {
   const [currentPage, setCurrentPage] = useState(1);
