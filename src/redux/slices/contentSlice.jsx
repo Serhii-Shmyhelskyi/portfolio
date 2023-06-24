@@ -26,7 +26,7 @@ const initialState = {
   pagination: 0,
 };
 
-const contentSlice = createSlice({
+export const contentSlice = createSlice({
   name: "content",
   initialState,
   extraReducers: (builder) => {

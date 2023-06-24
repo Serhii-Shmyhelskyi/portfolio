@@ -6,15 +6,9 @@ import { setCategoryId } from "../../redux/slices/menuSlice";
 
 import styles from "./menu.module.scss";
 
-const menuArr = [
-  { name: "Home", link: "" },
-  { name: "About me", link: "me" },
-  { name: "Blog", link: "blog" },
-  { name: "Contacts", link: "contacts" },
-];
-
 const Menu = () => {
   const menuState = useSelector((state) => state.menu.value);
+  const menuArr = useSelector((state) => state.menu.itemMenus);
   const dispatch = useDispatch();
   const [toggleMenu, setToggleMenu] = useState(true);
 
@@ -25,14 +19,14 @@ const Menu = () => {
         <ul>
           {menuArr.map((obj, i) => {
             return (
-              <li
-                key={i}
-                onClick={() => dispatch(setCategoryId(i))}
-                className={menuState === i ? `${styles.active}` : ""}>
-                <Link to={obj.link}>
+              <Link to={obj.link}>
+                <li
+                  key={i}
+                  onClick={() => dispatch(setCategoryId(i))}
+                  className={menuState === i ? `${styles.active}` : ""}>
                   <h3>{obj.name}</h3>
-                </Link>
-              </li>
+                </li>
+              </Link>
             );
           })}
         </ul>

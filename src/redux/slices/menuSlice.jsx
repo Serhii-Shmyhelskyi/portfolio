@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  itemMenus: [
+    { name: "Home", link: "" },
+    { name: "About me", link: "me" },
+    { name: "Blog", link: "blog" },
+    { name: "Contacts", link: "contacts" },
+  ],
   value: 0,
 };
 

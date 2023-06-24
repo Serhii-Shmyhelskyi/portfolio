@@ -1,0 +1,76 @@
+.me {
+  .me_educationKPI {
+    background-color: #f6f6f69a;
+  }
+  .me_educationPaton {
+    background-color: #f6f6f69a;
+  }
+  h2 {
+    text-align: center;
+    margin: 10px;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  p {
+    text-align: center;
+  }
+  .me_kpi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 400px;
+      border-radius: 20px;
+    }
+  }
+  .me_paton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .me_patonImg {
+      width: 400px;
+      border-radius: 20px;
+    }
+  }
+  .me_ntk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 11px;
+    grid-row-gap: 20px;
+    align-items: center;
+    div {
+      .me_ntkPhoto {
+        border-radius: 50px;
+        width: 340px;
+      }
+    }
+  }
+  .me_cina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 11px;
+    grid-row-gap: 20px;
+    align-items: center;
+    div {
+      .me_cinaPhoto {
+        border-radius: 50px;
+        width: 340px;
+      }
+    }
+  }
+}
+
+.kpi_st1 {
+  background-color: #f6f6f69a;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.kpi_st2 {
+  background-color: #f6f6f69a;
+  font-weight: bold;
+  font-style: italic;
+}
