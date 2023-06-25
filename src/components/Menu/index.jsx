@@ -19,9 +19,8 @@ const Menu = () => {
         <ul>
           {menuArr.map((obj, i) => {
             return (
-              <Link to={obj.link}>
+              <Link to={obj.link} key={i}>
                 <li
-                  key={i}
                   onClick={() => dispatch(setCategoryId(i))}
                   className={menuState === i ? `${styles.active}` : ""}>
                   <h3>{obj.name}</h3>

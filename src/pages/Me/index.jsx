@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import styles from "./me.module.scss";
+import FsLightbox from "fslightbox-react";
 
-import Modal from "../../components/Module/Module";
+import styles from "./me.module.scss";
 import meKPI from "../../assets/img/me_kpi.jpeg";
 import mePaton from "../../assets/img/me_paton.jpg";
 
@@ -24,61 +24,31 @@ import China8 from "../../assets/img/Cina8.jpg";
 import China9 from "../../assets/img/Cina9.jpg";
 
 const Me = () => {
-  const NTKPhoto = [NTK1, NTK2, NTK3, NTK4, NTK5, NTK6];
+  const [toggler, setToggler] = useState(false);
+  const [toggler2, setToggler2] = useState(false);
+  const [indexPhoto, setIndexPhoto] = useState(0);
+  const [indexPhoto2, setIndexPhoto2] = useState(0);
 
-  const CinaPhoto = [
-    China1,
-    China2,
-    China3,
-    China4,
-    China5,
-    China6,
-    China7,
-    China8,
-    China9,
+  const NTKPhoto = [
+    { name: NTK1, id: 0 },
+    { name: NTK2, id: 1 },
+    { name: NTK3, id: 2 },
+    { name: NTK4, id: 3 },
+    { name: NTK5, id: 4 },
+    { name: NTK6, id: 5 },
   ];
 
-  const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
-
-  const handleClick = (item, index) => {
-    setCurrentIndex(index);
-    setClickedImg(item);
-  };
-
-  const handelRotationRight = () => {
-    const totalLength = NTKPhoto.length;
-    if (currentIndex + 1 >= totalLength) {
-      setCurrentIndex(0);
-      const newUrl = NTKPhoto[0];
-      setClickedImg(newUrl);
-      return;
-    }
-    const newIndex = currentIndex + 1;
-    const newUrl = NTKPhoto.filter((item) => {
-      return NTKPhoto.indexOf(item) === newIndex;
-    });
-    const newItem = newUrl[0];
-    setClickedImg(newItem);
-    setCurrentIndex(newIndex);
-  };
-
-  const handelRotationLeft = () => {
-    const totalLength = NTKPhoto.length;
-    if (currentIndex === 0) {
-      setCurrentIndex(totalLength - 1);
-      const newUrl = NTKPhoto[totalLength - 1];
-      setClickedImg(newUrl);
-      return;
-    }
-    const newIndex = currentIndex - 1;
-    const newUrl = NTKPhoto.filter((item) => {
-      return NTKPhoto.indexOf(item) === newIndex;
-    });
-    const newItem = newUrl[0];
-    setClickedImg(newItem);
-    setCurrentIndex(newIndex);
-  };
+  const CinaPhoto = [
+    { name: China1, id: 0 },
+    { name: China2, id: 1 },
+    { name: China3, id: 2 },
+    { name: China4, id: 3 },
+    { name: China5, id: 4 },
+    { name: China6, id: 5 },
+    { name: China7, id: 6 },
+    { name: China8, id: 7 },
+    { name: China9, id: 8 },
+  ];
 
   return (
     <div className={styles.me}>
@@ -89,8 +59,8 @@ const Me = () => {
       <div className={styles.me_kpi}>
         <div className={styles.me_educationKPI}>
           <p>
-            In 2016, I graduated from NTUU "KPI" E. O. Paton with a master's
-            degree.
+            In 2016, I graduated from National Technical University of Ukraine
+            “Igor Sikorsky Kyiv Polytechnic Institute” with a master's degree.
           </p>
           <p>Faculty:"Welding"</p>
           <p>Department: "Electric welding installations" </p>
@@ -154,50 +124,35 @@ const Me = () => {
         Welding. E. O. Paton”
       </h2>
       <div className={styles.me_ntk}>
-        {NTKPhoto.map((item, index) => (
-          <div key={index}>
+        {NTKPhoto.map((item) => (
+          <div key={item.id} onClick={() => setIndexPhoto(item.id)}>
             <img
               className={styles.me_ntkPhoto}
-              src={item}
+              src={item.name}
               alt={"NtkPhoto"}
-              onClick={() => handleClick(item, index)}
+              key={indexPhoto}
+              onClick={() => setToggler(!toggler)}
             />
           </div>
         ))}
-        <div>
-          {clickedImg && (
-            <Modal
-              clickedImg={clickedImg}
-              handelRotationRight={handelRotationRight}
-              setClickedImg={setClickedImg}
-              handelRotationLeft={handelRotationLeft}
-            />
-          )}
-        </div>
       </div>
+      <FsLightbox toggler={toggler} sources={[NTKPhoto[indexPhoto].name]} />
       <h2>My works in Xianchu energy development group Itd</h2>
+
       <div className={styles.me_cina}>
-        {CinaPhoto.map((item, index) => (
-          <div key={index}>
+        {CinaPhoto.map((item) => (
+          <div key={item.id} onClick={() => setIndexPhoto2(item.id)}>
             <img
               className={styles.me_cinaPhoto}
-              src={item}
+              src={item.name}
               alt={"CinaPhoto"}
-              onClick={() => handleClick(item, index)}
+              key={indexPhoto2}
+              onClick={() => setToggler2(!toggler2)}
             />
           </div>
         ))}
-        <div>
-          {clickedImg && (
-            <Modal
-              clickedImg={clickedImg}
-              handelRotationRight={handelRotationRight}
-              setClickedImg={setClickedImg}
-              handelRotationLeft={handelRotationLeft}
-            />
-          )}
-        </div>
       </div>
+      <FsLightbox toggler={toggler2} sources={[CinaPhoto[indexPhoto2].name]} />
     </div>
   );
 };

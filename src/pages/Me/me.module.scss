@@ -59,6 +59,7 @@
       .me_cinaPhoto {
         border-radius: 50px;
         width: 340px;
+        cursor: pointer;
       }
     }
   }
@@ -75,4 +76,65 @@
   background-color: #f6f6f69a;
   font-weight: bold;
   font-style: italic;
+}
+
+@media (max-width: 1120px) {
+  .me {
+    .me_ntk {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+    .me_cina {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .me {
+    .me_kpi {
+      display: block;
+      text-align: center;
+      img {
+        width: 500px;
+        margin: 10px 0;
+      }
+    }
+    .me_paton {
+      display: block;
+      text-align: center;
+      img {
+        width: 500px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .me {
+    .me_ntk {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .me_cina {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .me {
+    .me_kpi {
+      img {
+        width: 300px;
+        margin: 5px 0;
+      }
+    }
+    .me_paton {
+      .me_patonImg {
+        width: 300px;
+      }
+    }
+  }
 }
