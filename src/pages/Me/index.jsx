@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import styles from "./me.module.scss";
 
+import Modal from "../../components/Module/Module";
 import meKPI from "../../assets/img/me_kpi.jpeg";
 import mePaton from "../../assets/img/me_paton.jpg";
 
@@ -36,6 +37,48 @@ const Me = () => {
     China8,
     China9,
   ];
+
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleClick = (item, index) => {
+    setCurrentIndex(index);
+    setClickedImg(item);
+  };
+
+  const handelRotationRight = () => {
+    const totalLength = NTKPhoto.length;
+    if (currentIndex + 1 >= totalLength) {
+      setCurrentIndex(0);
+      const newUrl = NTKPhoto[0];
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex + 1;
+    const newUrl = NTKPhoto.filter((item) => {
+      return NTKPhoto.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0];
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
+  const handelRotationLeft = () => {
+    const totalLength = NTKPhoto.length;
+    if (currentIndex === 0) {
+      setCurrentIndex(totalLength - 1);
+      const newUrl = NTKPhoto[totalLength - 1];
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex - 1;
+    const newUrl = NTKPhoto.filter((item) => {
+      return NTKPhoto.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0];
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
 
   return (
     <div className={styles.me}>
@@ -111,23 +154,49 @@ const Me = () => {
         Welding. E. O. Paton”
       </h2>
       <div className={styles.me_ntk}>
-        {NTKPhoto.map((obj, i) => {
-          return (
-            <div>
-              <img className={styles.me_ntkPhoto} src={obj} alt="NTKPhoto" />
-            </div>
-          );
-        })}
+        {NTKPhoto.map((item, index) => (
+          <div key={index}>
+            <img
+              className={styles.me_ntkPhoto}
+              src={item}
+              alt={"NtkPhoto"}
+              onClick={() => handleClick(item, index)}
+            />
+          </div>
+        ))}
+        <div>
+          {clickedImg && (
+            <Modal
+              clickedImg={clickedImg}
+              handelRotationRight={handelRotationRight}
+              setClickedImg={setClickedImg}
+              handelRotationLeft={handelRotationLeft}
+            />
+          )}
+        </div>
       </div>
       <h2>My works in Xianchu energy development group Itd</h2>
       <div className={styles.me_cina}>
-        {CinaPhoto.map((obj, i) => {
-          return (
-            <div key={i}>
-              <img className={styles.me_cinaPhoto} src={obj} alt="ChinaPhoto" />
-            </div>
-          );
-        })}
+        {CinaPhoto.map((item, index) => (
+          <div key={index}>
+            <img
+              className={styles.me_cinaPhoto}
+              src={item}
+              alt={"CinaPhoto"}
+              onClick={() => handleClick(item, index)}
+            />
+          </div>
+        ))}
+        <div>
+          {clickedImg && (
+            <Modal
+              clickedImg={clickedImg}
+              handelRotationRight={handelRotationRight}
+              setClickedImg={setClickedImg}
+              handelRotationLeft={handelRotationLeft}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
