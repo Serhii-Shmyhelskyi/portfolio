@@ -32,7 +32,6 @@
     .me_patonImg {
       width: 400px;
       border-radius: 20px;
-      cursor: pointer;
     }
   }
   .me_ntk {
@@ -46,6 +45,10 @@
         border-radius: 50px;
         width: 340px;
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.08);
+        }
       }
     }
   }
@@ -60,6 +63,10 @@
         border-radius: 50px;
         width: 340px;
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.08);
+        }
       }
     }
   }
