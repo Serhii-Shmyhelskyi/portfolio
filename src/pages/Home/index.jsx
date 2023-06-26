@@ -54,7 +54,9 @@ const Home = () => {
   const contents = contentState.map((obj, i) => {
     return (
       <div key={i} className={styles.content_boxContent}>
-        <h3>{obj.name}</h3>
+        <a href={obj.siteUrl}>
+          <h3>{obj.name}</h3>
+        </a>
         <a href={obj.siteUrl}>
           <img src={photoArr[obj.id]} alt="Photo site" />
         </a>
