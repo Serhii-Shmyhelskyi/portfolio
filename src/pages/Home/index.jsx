@@ -17,6 +17,7 @@ import photoSite6 from "../../assets/img/imageSite6.jpg";
 import photoSite7 from "../../assets/img/imageSite7.jpg";
 import photoSite8 from "../../assets/img/imageSite8.jpg";
 import photoSite9 from "../../assets/img/imageSite9.jpg";
+import photoSite10 from "../../assets/img/imageSite10.jpg";
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,6 +36,7 @@ const Home = () => {
     photoSite7,
     photoSite8,
     photoSite9,
+    photoSite10,
   ];
 
   const getContent = async () => {
