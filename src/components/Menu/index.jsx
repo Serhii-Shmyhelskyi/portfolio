@@ -22,7 +22,6 @@ const Menu = () => {
           <span></span>
           <span></span>
         </div>
-        <button>MENU</button>
       </div>
 
       <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
