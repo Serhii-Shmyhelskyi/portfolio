@@ -14,7 +14,17 @@ const Menu = () => {
 
   return (
     <>
-      <button onClick={() => setToggleMenu(!toggleMenu)}>MENU</button>
+      <div
+        className={styles.menu_btn}
+        onClick={() => setToggleMenu(!toggleMenu)}>
+        <div className={styles.menu_btnSpan}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <button>MENU</button>
+      </div>
+
       <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
         <ul>
           {menuArr.map((obj, i) => {

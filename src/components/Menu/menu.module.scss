@@ -29,6 +29,23 @@
   }
 }
 
+.menu_btn {
+  display: none;
+  .menu_btnSpan {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 40px;
+    cursor: pointer;
+    padding: 10px 5px 0 0;
+    span {
+      display: block;
+      height: 3px;
+      margin-bottom: 10px;
+      background-color: #e8c300;
+    }
+  }
+}
 button {
   display: none;
 }
@@ -50,8 +67,13 @@ button {
 }
 
 @media (max-width: 450px) {
+  .menu_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   button {
-    margin: 10px auto;
+    margin: 10px 0;
     display: block;
     border-radius: 20px;
     font-weight: bold;
