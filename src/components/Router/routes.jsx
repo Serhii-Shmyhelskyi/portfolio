@@ -6,11 +6,11 @@ import Content from "../../pages/Home/index";
 import Me from "../../pages/Me";
 import Blog from "../../pages/Blog";
 import Contacts from "../../pages/Contacts";
-import ErrorPage from "../../pages/ErrorPage";
+import ErrorComponent from "../ErrorComponent";
 
 export const router = createBrowserRouter([
   {
-    path: "portfolio",
+    path: "/",
     // portfolio
     element: <App />,
     children: [
@@ -19,20 +19,20 @@ export const router = createBrowserRouter([
         element: <Content />,
       },
       {
-        path: "me",
+        path: "/me",
         element: <Me />,
       },
       {
-        path: "blog",
+        path: "/blog",
         element: <Blog />,
       },
       {
-        path: "contacts",
+        path: "/contacts",
         element: <Contacts />,
       },
       {
         path: "*",
-        element: <ErrorPage />,
+        element: <ErrorComponent />,
       },
     ],
   },

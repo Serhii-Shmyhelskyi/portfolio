@@ -9,7 +9,7 @@ export const Pagination = ({ currentPage, onChangePage }) => {
 
   let pageRange = 6;
   //кількість карток на сторінці
-  const pageCount = pagination / pageRange;
+  const pageCount = Math.ceil(pagination / pageRange);
 
   return (
     <ReactPaginate

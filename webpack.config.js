@@ -7,10 +7,12 @@ module.exports = {
   entry: ["@babel/polyfill", "./src/index.jsx"], //.tsx якщо використовувати TypScript
   output: {
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
     filename: "[name].[hash].js",
   },
   devServer: {
     port: 3000,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [

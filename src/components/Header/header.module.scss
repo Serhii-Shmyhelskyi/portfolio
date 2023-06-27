@@ -29,9 +29,9 @@
         border-radius: 5px;
         transition: background-color 0.1s ease-in-out;
         transition: transform 0.2s ease-in-out;
+        cursor: pointer;
         &:hover {
           background-color: darken(#d6d8d8dc, 2%);
-          transform: scaleX(1.1);
         }
       }
 
