@@ -8,14 +8,16 @@ const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
   let itemMenus = [
-    { name: "Home", link: "" },
-    { name: "About me", link: "me" },
+    { name: "Home", link: "portfolio" },
+    { name: "About me", link: "portfolio/me" },
     // { name: "Blog", link: "blog" },
     // { name: "Contacts", link: "contacts" },
   ];
+
   let location = useLocation();
 
   let isActiveMenu = (button) => location.pathname === button.link;
+  console.log(location.pathname);
 
   return (
     <>
