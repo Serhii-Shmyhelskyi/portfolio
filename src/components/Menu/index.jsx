@@ -18,7 +18,7 @@ const Menu = () => {
 
   let isActiveMenu = (button) =>
     location.pathname ==
-    ("/portfolio/" + button.link && "/portfolio" + button.link);
+    ("/portfolio/" + button.link || "/portfolio" + button.link);
 
   // console.log(location.pathname);
 
