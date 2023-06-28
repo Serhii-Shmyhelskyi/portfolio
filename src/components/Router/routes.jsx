@@ -10,7 +10,7 @@ import ErrorComponent from "../ErrorComponent";
 
 export const router = createBrowserRouter([
   {
-    path: "",
+    path: "portfolio",
     // portfolio
     element: <App />,
     children: [
@@ -19,15 +19,15 @@ export const router = createBrowserRouter([
         element: <Content />,
       },
       {
-        path: "/me",
+        path: "me",
         element: <Me />,
       },
       {
-        path: "/blog",
+        path: "blog",
         element: <Blog />,
       },
       {
-        path: "/contacts",
+        path: "contacts",
         element: <Contacts />,
       },
       {

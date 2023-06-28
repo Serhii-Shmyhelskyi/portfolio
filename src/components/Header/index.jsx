@@ -10,9 +10,8 @@ const Header = () => {
   return (
     <>
       <div className={styles.header_top}>
-        <Link to="/">
-          <div
-            className={styles.header_topLogo}>
+        <Link to="">
+          <div className={styles.header_topLogo}>
             <img width={120} src={Logo} alt="Logo" />
           </div>
         </Link>
@@ -53,7 +52,6 @@ const Header = () => {
 };
 
 export default Header;
-
 
 // import React from "react";
 
