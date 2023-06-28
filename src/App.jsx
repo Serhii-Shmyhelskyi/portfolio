@@ -12,9 +12,7 @@ const App = () => {
       <Header />
       <div className="container">
         <Menu />
-        <HashRouter>
-          <Outlet></Outlet>
-        </HashRouter>
+        <Outlet></Outlet>
       </div>
     </div>
   );
