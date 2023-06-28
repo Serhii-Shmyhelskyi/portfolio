@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Outlet } from "react-router-dom";
+import { HashRouter, Outlet } from "react-router-dom";
 
 import "./App.scss";
 import Header from "./components/Header";
@@ -12,7 +12,9 @@ const App = () => {
       <Header />
       <div className="container">
         <Menu />
-        <Outlet></Outlet>
+        <HashRouter>
+          <Outlet></Outlet>
+        </HashRouter>
       </div>
     </div>
   );
