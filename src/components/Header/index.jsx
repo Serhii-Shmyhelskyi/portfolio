@@ -10,11 +10,12 @@ const Header = () => {
   return (
     <>
       <div className={styles.header_top}>
-        <Link to="">
-          <div className={styles.header_topLogo}>
+        <div className={styles.header_topLogo}>
+          <Link to="/">
             <img width={120} src={Logo} alt="Logo" />
-          </div>
-        </Link>
+          </Link>
+        </div>
+
         <h1>Portfolio SHM</h1>
         <div className={styles.header_list}>
           <ul>
