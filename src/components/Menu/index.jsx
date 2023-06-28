@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { setCategoryId } from "../../redux/slices/menuSlice";
+import { useSelector } from "react-redux";
 
 import styles from "./menu.module.scss";
 
 const Menu = () => {
-  const menuState = useSelector((state) => state.menu.value);
-  const menuArr = useSelector((state) => state.menu.itemMenus);
-  const dispatch = useDispatch();
   const [toggleMenu, setToggleMenu] = useState(true);
+
+  let itemMenus = [
+    { name: "Home", link: "" },
+    { name: "About me", link: "me" },
+    // { name: "Blog", link: "blog" },
+    // { name: "Contacts", link: "contacts" },
+  ];
 
   return (
     <>
@@ -26,12 +29,10 @@ const Menu = () => {
 
       <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
         <ul>
-          {menuArr.map((obj, i) => {
+          {itemMenus.map((obj, i) => {
             return (
               <Link to={obj.link} key={i}>
-                <li
-                  onClick={() => dispatch(setCategoryId(i))}
-                  className={menuState === i ? `${styles.active}` : ""}>
+                <li className={itemMenus === i ? `${styles.active}` : ""}>
                   <h3>{obj.name}</h3>
                 </li>
               </Link>
