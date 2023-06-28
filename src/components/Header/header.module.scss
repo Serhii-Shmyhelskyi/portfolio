@@ -64,11 +64,10 @@
     .header_list {
       width: 100%;
       justify-content: space-evenly;
-      a {
-        img {
-          width: 100px;
-        }
-      }
     }
   }
+}
+
+.header_gh {
+  display: inline;
 }

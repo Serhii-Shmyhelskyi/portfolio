@@ -44,7 +44,7 @@ const Header = () => {
                   src="https://img.icons8.com/?size=512&id=12599&format=png"
                   alt="gitHub"
                 />
-                <a href="https://github.com/Serhii-Shmyhelskyi">github</a>
+                <p className={styles.header_gh}>github</p>
               </li>
             </a>
           </ul>
