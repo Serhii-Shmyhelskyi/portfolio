@@ -9,7 +9,7 @@ const Menu = () => {
 
   let itemMenus = [
     { name: "Home", link: "" },
-    { name: "About me", link: "/me" },
+    { name: "About me", link: "me" },
     // { name: "Blog", link: "blog" },
     // { name: "Contacts", link: "contacts" },
   ];
