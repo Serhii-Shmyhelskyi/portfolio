@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HashRouter, Outlet } from "react-router-dom";
+import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 
 import "./App.scss";
 import Header from "./components/Header";
@@ -12,6 +12,11 @@ const App = () => {
       <Header />
       <div className="container">
         <Menu />
+        <HashRouter>
+          <Routes>
+            <Route path="" />
+          </Routes>
+        </HashRouter>
         <Outlet></Outlet>
       </div>
     </div>
