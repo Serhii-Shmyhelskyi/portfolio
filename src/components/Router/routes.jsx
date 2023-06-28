@@ -10,7 +10,7 @@ import ErrorComponent from "../ErrorComponent";
 
 export const router = createBrowserRouter([
   {
-    path: "portfolio",
+    path: "portfolio/",
     // portfolio
     element: <App />,
     children: [
