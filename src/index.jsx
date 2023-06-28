@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
@@ -11,7 +11,7 @@ const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <PersistGate loading={<h3>Loading</h3>} persistor={persistor}>
-      <HashRouter router={router} />
+      <RouterProvider router={router} />
     </PersistGate>
   </Provider>
 );
