@@ -1,15 +1,15 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
-import { useSelector } from "react-redux";
 
+import { useGetAllGoodsQuery } from "../../redux/slices/contentSlice";
 import styles from "./pagination.module.scss";
 
 export const Pagination = ({ currentPage, onChangePage }) => {
-  const { pagination } = useSelector((state) => state.content);
+  const { data: allGoods = [] } = useGetAllGoodsQuery();
 
   let pageRange = 6;
   //кількість карток на сторінці
-  const pageCount = Math.ceil(pagination / pageRange);
+  const pageCount = Math.ceil(allGoods.length / pageRange);
 
   return (
     <ReactPaginate
