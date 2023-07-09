@@ -1,5 +1,6 @@
-.menu {
-  margin: 20px 0;
+.menu,
+.menu__toggleDown {
+  margin-bottom: 20px;
   ul {
     display: flex;
     justify-content: center;
@@ -59,12 +60,7 @@ button {
     ul {
       li {
         width: 100px;
-        height: 35px;
-
-        h3 {
-          font-size: 18px;
-          top: 2px;
-        }
+        height: 40px;
       }
     }
   }
@@ -88,14 +84,13 @@ button {
     color: #fff;
   }
   .menu__toggleDown {
-    transition: height 0.5s ease;
-    margin: 20px 0;
+    margin-bottom: 30px;
     height: 70px;
+    transition: height 0.3s ease-in-out;
     ul {
       display: block;
       justify-content: center;
       align-items: center;
-
       li {
         width: 100%;
         height: 40px;
@@ -121,14 +116,17 @@ button {
   }
 
   .menu {
-    transition: height 0.3s ease;
     height: 0;
     overflow: hidden;
+    transition: height 0.3s ease-in-out;
     ul {
       display: block;
+      justify-content: center;
+      align-items: center;
       li {
         width: 100%;
         height: 40px;
+        text-align: center;
         margin: 5px 0 0 0;
       }
     }
