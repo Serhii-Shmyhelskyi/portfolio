@@ -26,26 +26,30 @@ import photoSite8 from "../../assets/img/imageSite8.jpg";
 import photoSite9 from "../../assets/img/imageSite9.jpg";
 import photoSite10 from "../../assets/img/imageSite10.jpg";
 
-export const NTKPhoto = [
-  { name: NTK1, id: 0 },
-  { name: NTK2, id: 1 },
-  { name: NTK3, id: 2 },
-  { name: NTK4, id: 3 },
-  { name: NTK5, id: 4 },
-  { name: NTK6, id: 5 },
-];
+export const NTKPhoto = [NTK1, NTK2, NTK3, NTK4, NTK5, NTK6];
 
 export const CinaPhoto = [
-  { name: China1, id: 0 },
-  { name: China2, id: 1 },
-  { name: China3, id: 2 },
-  { name: China4, id: 3 },
-  { name: China5, id: 4 },
-  { name: China6, id: 5 },
-  { name: China7, id: 6 },
-  { name: China8, id: 7 },
-  { name: China9, id: 8 },
+  China1,
+  China2,
+  China3,
+  China4,
+  China5,
+  China6,
+  China7,
+  China8,
+  China9,
 ];
+// export const CinaPhoto = [
+//   { name: China1, id: 1 },
+//   { name: China2, id: 2 },
+//   { name: China3, id: 3 },
+//   { name: China4, id: 4 },
+//   { name: China5, id: 5 },
+//   { name: China6, id: 6 },
+//   { name: China7, id: 7 },
+//   { name: China8, id: 8 },
+//   { name: China9, id: 9 },
+// ];
 
 export const photoArr = [
   photoSite1,

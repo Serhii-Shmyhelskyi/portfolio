@@ -14,6 +14,15 @@ const Me = () => {
   const [indexPhoto, setIndexPhoto] = useState(0);
   const [indexPhoto2, setIndexPhoto2] = useState(0);
 
+  const openLightbox = (index) => {
+    setIndexPhoto(index); // Встановлюємо індекс зображення
+    setToggler(!toggler);
+  };
+  const openLightbox2 = (index2) => {
+    setIndexPhoto2(index2); // Встановлюємо індекс зображення
+    setToggler2(!toggler2);
+  };
+
   return (
     <div className={styles.me}>
       <h2>My IT road</h2>
@@ -98,35 +107,23 @@ const Me = () => {
         Welding. E. O. Paton”
       </h2>
       <div className={styles.me_ntk}>
-        {NTKPhoto.map((item) => (
-          <div key={item.id} onClick={() => setIndexPhoto(item.id)}>
-            <img
-              className={styles.me_ntkPhoto}
-              src={item.name}
-              alt={"NtkPhoto"}
-              key={indexPhoto}
-              onClick={() => setToggler(!toggler)}
-            />
+        {NTKPhoto.map((item, i) => (
+          <div key={i} onClick={() => openLightbox(i + 1)}>
+            <img className={styles.me_ntkPhoto} src={item} alt={"NtkPhoto"} />
           </div>
         ))}
       </div>
-      <FsLightbox toggler={toggler} sources={[NTKPhoto[indexPhoto].name]} />
+      <FsLightbox toggler={toggler} sources={NTKPhoto} slide={indexPhoto} />
       <h2>My works in Xianchu energy development group Itd</h2>
 
       <div className={styles.me_cina}>
-        {CinaPhoto.map((item) => (
-          <div key={item.id} onClick={() => setIndexPhoto2(item.id)}>
-            <img
-              className={styles.me_cinaPhoto}
-              src={item.name}
-              alt={"CinaPhoto"}
-              key={indexPhoto2}
-              onClick={() => setToggler2(!toggler2)}
-            />
+        {CinaPhoto.map((item, i) => (
+          <div key={i} onClick={() => openLightbox2(i + 1)}>
+            <img className={styles.me_cinaPhoto} src={item} alt={"CinaPhoto"} />
           </div>
         ))}
       </div>
-      <FsLightbox toggler={toggler2} sources={[CinaPhoto[indexPhoto2].name]} />
+      <FsLightbox toggler={toggler2} sources={CinaPhoto} slide={indexPhoto2} />
     </div>
   );
 };
