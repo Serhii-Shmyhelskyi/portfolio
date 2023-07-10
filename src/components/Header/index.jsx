@@ -15,7 +15,6 @@ const Header = () => {
             <img width={100} src={Logo} alt="Logo" />
           </Link>
         </div>
-
         <h1>Portfolio SHM</h1>
         <div className={styles.header_list}>
           <ul>
