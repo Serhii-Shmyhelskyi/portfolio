@@ -52,7 +52,9 @@ const Header = () => {
               </li>
             </a>
           </ul>
-          <a href="https://www.linkedin.com/in/serhii-shmyhelskyi-99ba02200/">
+          <a
+            className={styles.header_a}
+            href="https://www.linkedin.com/in/serhii-shmyhelskyi-99ba02200/">
             <img width={100} src={Photo} alt="Serhii's photo" />
           </a>
         </div>
