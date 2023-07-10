@@ -16,9 +16,18 @@ const Me = () => {
 
   return (
     <div className={styles.me}>
-      <h2>
-        Hello, my name is Serhii Shmyhelskiy, let me introduce my career path
-      </h2>
+      <h2>My IT road</h2>
+      <p>
+        Hello, my name is Serhii Shmyhelskiy, let me introduce my career path. I
+        have been interested in programming for a long time, I began my journey
+        by studying Pascale and HTML while still at school. However, he
+        seriously took up the study of programming while already working as an
+        engineer at the Scientific and technical complex "Institute of Electric
+        Welding. E. O. Paton". At first, he often studied and made projects
+        using HTML and CSS. He took courses. Then he studied JS, used Gulp, Git.
+        and now I make projects based on the React.Js legend. I supplement my
+        knowledge and learn new technologies.
+      </p>
       <h2>Education</h2>
       <div className={styles.me_kpi}>
         <div className={styles.me_educationKPI}>
@@ -83,6 +92,7 @@ const Me = () => {
           </div>
         </div>
       </div>
+      <h2>Works:</h2>
       <h2>
         My works in Scientific and technical complex "Institute of Electric
         Welding. E. O. Paton”
