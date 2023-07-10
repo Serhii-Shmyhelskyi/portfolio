@@ -12,7 +12,7 @@ const Header = () => {
       <div className={styles.header_top}>
         <div className={styles.header_topLogo}>
           <Link to="/portfolio/">
-            <img width={120} src={Logo} alt="Logo" />
+            <img width={100} src={Logo} alt="Logo" />
           </Link>
         </div>
 
@@ -42,9 +42,18 @@ const Header = () => {
                 <p className={styles.header_gh}>github</p>
               </li>
             </a>
+            <a href="https://www.linkedin.com/in/serhii-shmyhelskyi-99ba02200/">
+              <li>
+                <img
+                  src="https://img.icons8.com/?size=512&id=8808&format=png"
+                  alt="linkedin"
+                />
+                <p className={styles.header_gh}>Linkedin</p>
+              </li>
+            </a>
           </ul>
-          <a href="https://github.com/Serhii-Shmyhelskyi">
-            <img width={120} src={Photo} alt="Serhii's photo" />
+          <a href="https://www.linkedin.com/in/serhii-shmyhelskyi-99ba02200/">
+            <img width={100} src={Photo} alt="Serhii's photo" />
           </a>
         </div>
       </div>
