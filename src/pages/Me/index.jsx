@@ -27,15 +27,20 @@ const Me = () => {
     <div className={styles.me}>
       <h2>My IT road</h2>
       <p>
-        Hello, my name is Serhii Shmyhelskiy, let me introduce my career path. I
-        have been interested in programming for a long time, I began my journey
-        by studying Pascale and HTML while still at school. However, he
-        seriously took up the study of programming while already working as an
-        engineer at the Scientific and technical complex "Institute of Electric
-        Welding. E. O. Paton". At first, he often studied and made projects
-        using HTML and CSS. He took courses. Then he studied JS, used Gulp, Git.
-        and now I make projects based on the React.Js legend. I supplement my
-        knowledge and learn new technologies.
+        Hello, my name is Serhii Shmyhelskiy. Let me introduce my career path. I
+        have been interested in programming for a long time, and I began my
+        journey by studying Pascal and HTML while still in school. However, I
+        started seriously diving into programming when I was already working as
+        an engineer at the Scientific and Technical Complex "Institute of
+        Electric Welding E.O. Paton." Initially, I extensively studied and
+        worked on projects using HTML and CSS. I also took courses to further
+        enhance my skills. Later on, I delved into JavaScript, utilized tools
+        like Gulp and Git, and currently, I develop projects based on the
+        React.js framework. I continuously expand my knowledge and stay updated
+        with new technologies. Overall, your text looks great! It effectively
+        communicates your interest in programming, your experience with
+        different technologies, and your dedication to continuous learning. Well
+        done!
       </p>
       <h2>Education</h2>
       <div className={styles.me_kpi}>

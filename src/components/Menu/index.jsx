@@ -50,7 +50,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-{
-  /* <li className={isActiveMenu(obj) ? `${styles.active}` : ""}></li> */
-}
