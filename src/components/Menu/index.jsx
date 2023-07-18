@@ -19,7 +19,7 @@ const Menu = () => {
   let isActiveMenu = (button) => location.pathname === button.pathnameId;
 
   return (
-    <>
+    <div className={!toggleMenu ? styles.menu12 : styles.menu13}>
       <div
         className={styles.menu_btn}
         onClick={() => setToggleMenu(!toggleMenu)}>
@@ -30,12 +30,10 @@ const Menu = () => {
             <span></span>
           </div>
         ) : (
-          <div className={styles.menu_btnSpan2}>
-            {/* <span className={styles.menu_btnSpan2SpanT}></span>
-            <span className={styles.menu_btnSpan2SpanB}></span> */}
-          </div>
+          <div className={styles.menu_btnSpan2}></div>
         )}
       </div>
+
       <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
         <ul>
           {itemMenus.map((obj, i) => {
@@ -53,7 +51,7 @@ const Menu = () => {
           })}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
