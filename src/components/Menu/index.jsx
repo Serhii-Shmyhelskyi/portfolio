@@ -19,7 +19,7 @@ const Menu = () => {
   let isActiveMenu = (button) => location.pathname === button.pathnameId;
 
   return (
-    <div className={!toggleMenu ? styles.menu12 : styles.menu13}>
+    <div className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}>
       <div
         className={styles.menu_btn}
         onClick={() => setToggleMenu(!toggleMenu)}>
@@ -34,22 +34,24 @@ const Menu = () => {
         )}
       </div>
 
-      <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
-        <ul>
-          {itemMenus.map((obj, i) => {
-            return (
-              <Link to={obj.link} key={i}>
-                <li
-                  onClick={() => setToggleMenu(!toggleMenu)}
-                  className={classnames({
-                    [styles.active]: isActiveMenu(obj),
-                  })}>
-                  <h3>{obj.name}</h3>
-                </li>
-              </Link>
-            );
-          })}
-        </ul>
+      <div className={toggleMenu ? "" : styles.menu__toggleDown}>
+        <div className={styles.menu}>
+          <ul>
+            {itemMenus.map((obj, i) => {
+              return (
+                <Link to={obj.link} key={i}>
+                  <li
+                    onClick={() => setToggleMenu(!toggleMenu)}
+                    className={classnames({
+                      [styles.active]: isActiveMenu(obj),
+                    })}>
+                    <h3>{obj.name}</h3>
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
