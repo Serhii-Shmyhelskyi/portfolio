@@ -23,11 +23,18 @@ const Menu = () => {
       <div
         className={styles.menu_btn}
         onClick={() => setToggleMenu(!toggleMenu)}>
-        <div className={styles.menu_btnSpan}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        {toggleMenu ? (
+          <div className={styles.menu_btnSpan}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        ) : (
+          <div className={styles.menu_btnSpan2}>
+            {/* <span className={styles.menu_btnSpan2SpanT}></span>
+            <span className={styles.menu_btnSpan2SpanB}></span> */}
+          </div>
+        )}
       </div>
       <div className={toggleMenu ? styles.menu : styles.menu__toggleDown}>
         <ul>
@@ -35,6 +42,7 @@ const Menu = () => {
             return (
               <Link to={obj.link} key={i}>
                 <li
+                  onClick={() => setToggleMenu(!toggleMenu)}
                   className={classnames({
                     [styles.active]: isActiveMenu(obj),
                   })}>
