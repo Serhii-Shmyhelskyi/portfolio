@@ -34,7 +34,7 @@
   display: none;
   .menu_btnSpan {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 20px;
     width: 40px;
     cursor: pointer;
@@ -52,9 +52,9 @@
   }
   .menu_btnSpan2 {
     position: absolute;
-    right: 14px;
+    right: 23px;
     z-index: 1;
-    top: 40px;
+    top: 42px;
     width: 40px;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;

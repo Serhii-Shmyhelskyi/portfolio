@@ -7,10 +7,11 @@ import { Skeleton } from "../../components/Skeleton/Skeleton";
 import { photoArr } from "../../components/data/data";
 
 import styles from "./content.module.scss";
+import ErrorComponent from "../../components/ErrorComponent";
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const { data: goods = [], isLoading } = useGetGoodsQuery(currentPage);
+  const { data: goods = [], isLoading, error } = useGetGoodsQuery(currentPage);
 
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
 
@@ -33,10 +34,14 @@ const Home = () => {
 
   return (
     <>
-      <div className={styles.content_topText}>
-        <h2>My works</h2>
-        <p>Hello, these are my works</p>
-      </div>
+      {error ? (
+        <ErrorComponent />
+      ) : (
+        <div className={styles.content_topText}>
+          <h2>My works</h2>
+          <p>Hello, these are my works</p>
+        </div>
+      )}
 
       <div className={styles.content_box}>
         {isLoading ? skeletons : contents}
