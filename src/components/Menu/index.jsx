@@ -46,7 +46,7 @@ const Menu = ({ isActive }) => {
               return (
                 <Link to={obj.link} key={i}>
                   <li
-                    onClick={() => setToggleMenu(!toggleMenu)}
+                    onClick={() => AllActive(toggleMenu)}
                     className={classnames({
                       [styles.active]: isActiveMenu(obj),
                     })}>
