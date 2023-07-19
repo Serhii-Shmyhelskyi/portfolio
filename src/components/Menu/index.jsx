@@ -4,8 +4,13 @@ import classnames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./menu.module.scss";
 
-const Menu = () => {
+const Menu = ({ isActive }) => {
   const [toggleMenu, setToggleMenu] = useState(true);
+
+  const AllActive = (toggleMenu) => {
+    setToggleMenu(!toggleMenu);
+    isActive(toggleMenu);
+  };
 
   let itemMenus = [
     { name: "Home", link: "/portfolio/", pathnameId: "/portfolio/" },
@@ -17,12 +22,9 @@ const Menu = () => {
   let location = useLocation();
 
   let isActiveMenu = (button) => location.pathname === button.pathnameId;
-
   return (
     <div className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}>
-      <div
-        className={styles.menu_btn}
-        onClick={() => setToggleMenu(!toggleMenu)}>
+      <div className={styles.menu_btn} onClick={() => AllActive(toggleMenu)}>
         {toggleMenu ? (
           <div className={styles.menu_btnSpan}>
             <span></span>
