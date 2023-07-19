@@ -36,7 +36,10 @@ const Menu = ({ isActive }) => {
         )}
       </div>
 
-      <div className={toggleMenu ? "" : styles.menu__toggleDown}>
+      <div
+        className={
+          toggleMenu ? styles.menu__toggleDownNull : styles.menu__toggleDown
+        }>
         <div className={styles.menu}>
           <ul>
             {itemMenus.map((obj, i) => {

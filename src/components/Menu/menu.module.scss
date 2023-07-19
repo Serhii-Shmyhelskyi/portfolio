@@ -35,7 +35,7 @@
   .menu_btnSpan {
     position: absolute;
     right: 10px;
-    top: 40px;
+    top: 20px;
     width: 40px;
     cursor: pointer;
     padding: 10px 5px 0 0;
@@ -52,9 +52,9 @@
   }
   .menu_btnSpan2 {
     position: absolute;
-    right: 12px;
+    right: 14px;
     z-index: 1;
-    top: 48px;
+    top: 40px;
     width: 40px;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
@@ -122,7 +122,7 @@ button {
     width: 135px;
     height: 100%;
     transition: all 0.3s ease-in-out;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     ul {
       display: block;
       justify-content: center;
@@ -142,12 +142,12 @@ button {
 
   .menu__toggleDown {
     .menu {
-      display: fixed;
       transform: translateX(0);
       background-color: #eed56e;
-      border-radius: 0 20px 20px 0;
-      z-index: 1;
     }
+  }
+  .menu__toggleDownNull {
+    display: none;
   }
 
   .menuWrapper {
