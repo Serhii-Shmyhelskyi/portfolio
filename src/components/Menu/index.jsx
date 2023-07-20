@@ -4,12 +4,15 @@ import classnames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./menu.module.scss";
 
-const Menu = ({ isActive }) => {
+const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
   const AllActive = (toggleMenu) => {
     setToggleMenu(!toggleMenu);
-    isActive(toggleMenu);
+    toggleMenu
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "visible");
+    console.log(toggleMenu);
   };
 
   let itemMenus = [
