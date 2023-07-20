@@ -21,10 +21,12 @@ const App = () => {
 
   return (
     <div className="wrapper" style={menuLogic}>
-      <Header />
-      <div className="container">
-        <Menu isActive={isActive} />
-        <Outlet></Outlet>
+      <div>
+        <Header />
+        <div className="container">
+          <Menu isActive={isActive} />
+          <Outlet></Outlet>
+        </div>
       </div>
     </div>
   );
