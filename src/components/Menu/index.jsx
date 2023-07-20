@@ -22,6 +22,7 @@ const Menu = ({ isActive }) => {
   let location = useLocation();
 
   let isActiveMenu = (button) => location.pathname === button.pathnameId;
+  
   return (
     <div className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}>
       <div className={styles.menu_btn} onClick={() => AllActive(toggleMenu)}>

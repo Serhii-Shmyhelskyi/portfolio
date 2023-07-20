@@ -10,13 +10,13 @@ const App = () => {
   const [position, setPosition] = useState(false);
   const isActive = (isActive) => setPosition(isActive);
   return (
-    <div style={position ? { position: "fixed" } : { position: "absolute" }}>
-      <div className="wrapper">
-        <Header />
-        <div className="container">
-          <Menu isActive={isActive} />
-          <Outlet></Outlet>
-        </div>
+    <div
+      className="wrapper"
+      style={position ? { position: "fixed" } : { position: "static" }}>
+      <Header />
+      <div className="container">
+        <Menu isActive={isActive} />
+        <Outlet></Outlet>
       </div>
     </div>
   );
