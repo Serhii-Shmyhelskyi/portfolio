@@ -53,7 +53,6 @@
   .menu_btnSpan2 {
     position: absolute;
     right: 23px;
-    z-index: 777;
     top: 40px;
     width: 40px;
     cursor: pointer;
@@ -123,6 +122,7 @@ button {
     height: 100%;
     transition: all 0.3s ease-in-out;
     border-radius: 0 20px 20px 0;
+    z-index: 10;
     ul {
       display: block;
       justify-content: center;

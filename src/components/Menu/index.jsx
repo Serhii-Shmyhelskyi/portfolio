@@ -12,7 +12,6 @@ const Menu = () => {
     toggleMenu
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
-    console.log(toggleMenu);
   };
 
   let itemMenus = [
@@ -27,19 +26,7 @@ const Menu = () => {
   let isActiveMenu = (button) => location.pathname === button.pathnameId;
 
   return (
-    <div className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}>
-      <div className={styles.menu_btn} onClick={() => AllActive(toggleMenu)}>
-        {toggleMenu ? (
-          <div className={styles.menu_btnSpan}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        ) : (
-          <div className={styles.menu_btnSpan2}></div>
-        )}
-      </div>
-
+    <>
       <div
         className={
           toggleMenu ? styles.menu__toggleDownNull : styles.menu__toggleDown
@@ -62,7 +49,23 @@ const Menu = () => {
           </ul>
         </div>
       </div>
-    </div>
+
+      <div
+        className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}
+        onClick={() => AllActive(toggleMenu)}>
+        <div className={styles.menu_btn} onClick={() => AllActive(toggleMenu)}>
+          {toggleMenu ? (
+            <div className={styles.menu_btnSpan}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          ) : (
+            <div className={styles.menu_btnSpan2}></div>
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 
