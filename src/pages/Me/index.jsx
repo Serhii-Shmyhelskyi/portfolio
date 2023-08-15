@@ -37,10 +37,7 @@ const Me = () => {
         enhance my skills. Later on, I delved into JavaScript, utilized tools
         like Gulp and Git, and currently, I develop projects based on the
         React.js framework. I continuously expand my knowledge and stay updated
-        with new technologies. Overall, your text looks great! It effectively
-        communicates your interest in programming, your experience with
-        different technologies, and your dedication to continuous learning. Well
-        done!
+        with new technologies.
       </p>
       <h2>Education</h2>
       <div className={styles.me_kpi}>

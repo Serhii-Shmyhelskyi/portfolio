@@ -14,6 +14,8 @@ const Menu = () => {
       : (document.body.style.overflow = "visible");
   };
 
+  let toogle = !toggleMenu && styles.menu__toggleRight;
+
   let itemMenus = [
     { name: "Home", link: "/portfolio/", pathnameId: "/portfolio/" },
     { name: "About me", link: "me", pathnameId: "/portfolio/me" },
@@ -27,11 +29,8 @@ const Menu = () => {
 
   return (
     <>
-      <div
-        className={
-          toggleMenu ? styles.menu__toggleDownNull : styles.menu__toggleDown
-        }>
-        <div className={styles.menu}>
+      <div className={toogle}>
+        <div className={styles.menu__content}>
           <ul>
             {itemMenus.map((obj, i) => {
               return (
@@ -51,17 +50,17 @@ const Menu = () => {
       </div>
 
       <div
-        className={!toggleMenu ? styles.menuWrapper : styles.menuWrapperDark}
+        className={toggleMenu ? styles.menu__wrapper : styles.menu__wrapperDark}
         onClick={() => AllActive(toggleMenu)}>
-        <div className={styles.menu_btn} onClick={() => AllActive(toggleMenu)}>
+        <div className={styles.menu_btn}>
           {toggleMenu ? (
-            <div className={styles.menu_btnSpan}>
+            <div className={styles.menu_btnOpen}>
               <span></span>
               <span></span>
               <span></span>
             </div>
           ) : (
-            <div className={styles.menu_btnSpan2}></div>
+            <div className={styles.menu_btnClose}></div>
           )}
         </div>
       </div>
