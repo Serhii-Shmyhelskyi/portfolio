@@ -28,16 +28,19 @@ const Me = () => {
       <h2>My IT road</h2>
       <p>
         Hello, my name is Serhii Shmyhelskiy. Let me introduce my career path. I
-        have been interested in programming for a long time, and I began my
-        journey by studying Pascal and HTML while still in school. However, I
-        started seriously diving into programming when I was already working as
-        an engineer at the Scientific and Technical Complex "Institute of
-        Electric Welding E.O. Paton." Initially, I extensively studied and
-        worked on projects using HTML and CSS. I also took courses to further
-        enhance my skills. Later on, I delved into JavaScript, utilized tools
-        like Gulp and Git, and currently, I develop projects based on the
-        React.js framework. I continuously expand my knowledge and stay updated
-        with new technologies.
+        began my journey by studying Pascal and HTML while still in school.
+        However, I started seriously diving into programming when I was already
+        working as an engineer at the Scientific and Technical Complex
+        "Institute of Electric Welding E.O. Paton." Implemented projects by
+        attending HTML and CSS courses (used JS, SCSS, CSS Animations, Gulp
+        technologies). I developed a photographer's portfolio site. Developed my
+        portfolio site using ReactJS, Redux Toolkit, RTK Query, React Router 6,
+        Axios, SCSS. Completed pet projects Varenuk store (ReactJS, Redux
+        Toolkit, TypeScript, React Router 6, Axios, SCSS), Sneakers store
+        (ReactJS, React Router 6, Axios, React Context, SCSS), website with a
+        quiz What kind of mushroom are you? (ReactJS, Redux Toolkit, React
+        Router 6, Axios, SCSS), site about Kyiv (ReactJS, Redux Toolkit, React
+        Router 6, TypeScript, SCSS), to do list (ReactJS, Axios, SCSS).
       </p>
       <h2>Education</h2>
       <div className={styles.me_kpi}>
