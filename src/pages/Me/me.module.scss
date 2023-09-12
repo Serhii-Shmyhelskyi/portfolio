@@ -19,7 +19,7 @@
   .me_kpi {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     img {
       width: 400px;
       border-radius: 20px;
@@ -28,9 +28,9 @@
   .me_paton {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     .me_patonImg {
-      width: 400px;
+      width: 350px;
       border-radius: 20px;
     }
   }
