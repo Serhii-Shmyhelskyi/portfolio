@@ -14,7 +14,6 @@ const Home = () => {
   const { data: goods = [], isLoading, error } = useGetGoodsQuery(currentPage);
 
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
-
   const contents = goods.map((obj, i) => {
     return (
       <div key={i} className={styles.content_boxContent}>

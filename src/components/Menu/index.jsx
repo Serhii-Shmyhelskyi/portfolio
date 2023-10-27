@@ -3,6 +3,7 @@ import classnames from "classnames";
 
 import { Link, useLocation } from "react-router-dom";
 import styles from "./menu.module.scss";
+import { pageUp } from "../function/function";
 
 const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
@@ -12,6 +13,7 @@ const Menu = () => {
     window.matchMedia("(max-width: 450px)").matches && toggleMenu
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
+    pageUp();
   };
 
   let toogle = !toggleMenu && styles.menu__toggleRight;
@@ -30,7 +32,7 @@ const Menu = () => {
   return (
     <>
       <div className={toogle}>
-        <div className={styles.menu__content}>
+        <nav className={styles.menu__content}>
           <ul>
             {itemMenus.map((obj, i) => {
               return (
@@ -46,7 +48,7 @@ const Menu = () => {
               );
             })}
           </ul>
-        </div>
+        </nav>
       </div>
 
       <div
