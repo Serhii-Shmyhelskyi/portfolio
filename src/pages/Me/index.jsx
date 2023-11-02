@@ -16,11 +16,11 @@ const Me = () => {
 
   const openLightbox = (index) => {
     setIndexPhoto(index); // Встановлюємо індекс зображення
-    setToggler(!toggler);
+    setToggler((toggler) => !toggler);
   };
   const openLightbox2 = (index2) => {
     setIndexPhoto2(index2); // Встановлюємо індекс зображення
-    setToggler2(!toggler2);
+    setToggler2((toggler2) => !toggler2);
   };
 
   return (

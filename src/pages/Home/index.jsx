@@ -17,10 +17,10 @@ const Home = () => {
   const contents = goods.map((obj, i) => {
     return (
       <div key={i} className={styles.content_boxContent}>
-        <a href={obj.siteUrl}>
+        <a href={obj.siteUrl} target="_blank">
           <h3>{obj.name}</h3>
         </a>
-        <a href={obj.siteUrl}>
+        <a href={obj.siteUrl} target="_blank">
           <img src={photoArr[obj.id]} alt="Photo site" />
         </a>
         <div className={styles.content_boxText}>

@@ -9,7 +9,7 @@ const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
   const AllActive = (toggleMenu) => {
-    setToggleMenu(!toggleMenu);
+    setToggleMenu((actualTogleMenu) => !actualTogleMenu);
     window.matchMedia("(max-width: 450px)").matches && toggleMenu
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
