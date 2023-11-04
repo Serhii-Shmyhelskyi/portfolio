@@ -13,7 +13,7 @@ html {
   margin: 0;
   list-style: none;
   outline: none;
-  font-family: "Nunito", Roboto, system-ui, Tahoma, sans-serif;
+  font-family: "Roboto", system-ui, Tahoma, sans-serif;
   box-sizing: border-box;
 }
 
@@ -51,24 +51,6 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.containerContent {
-  max-width: 970px;
-  margin: 0 auto;
-}
-
-.sectionLine {
-  border-bottom: 1px solid rgba(#d0d4d8, 0.5);
-}
-
-.title {
-  text-align: center;
-  font-family: Georgia;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 38px;
-  color: #4e5665;
 }
 
 .menu__btn {
