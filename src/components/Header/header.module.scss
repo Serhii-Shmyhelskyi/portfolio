@@ -11,21 +11,27 @@
   }
   .header_topLogo {
     width: 350px;
-    margin: 10px 0 0 20px;
+    margin: 10px 0 0 15px;
     img {
       border-radius: 20px;
     }
   }
   .header_list {
-    width: 350px;
+    width: 365px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 20px 10px 0;
+    margin: 5px 15px 5px 0;
+    .header_listContact {
+      margin: 0 10px 0 10px;
+    }
     img {
       border-radius: 100%;
     }
     ul {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
       li {
         border-radius: 5px;
         transition: background-color 0.1s ease-in-out;
@@ -45,7 +51,7 @@
       }
     }
     .header_a {
-      height: 100px;
+      height: 70px;
     }
   }
 }
