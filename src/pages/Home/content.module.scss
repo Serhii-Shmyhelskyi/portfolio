@@ -28,14 +28,19 @@
   }
 }
 
+.content_smallText {
+  font-size: 18px;
+}
+
 .content_topText {
+  border-bottom: 1px solid #f6f6f6d6;
+  margin-bottom: 10px;
   h2 {
     text-align: center;
     margin: 10px 0;
   }
   p {
     text-align: center;
-    margin-bottom: 20px;
   }
 }
 

@@ -37,8 +37,9 @@ const Home = () => {
         <ErrorComponent />
       ) : (
         <div className={styles.content_topText}>
-          <h2>My works</h2>
-          <p>Hello, these are my works</p>
+          <h2>Hi, my name is Serhii</h2>
+          <p className={styles.content_smallText}>I'm front-end developer</p>
+          <h2 className={styles.content_bigText}>My projects</h2>
         </div>
       )}
 
