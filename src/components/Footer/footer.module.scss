@@ -5,7 +5,10 @@
   border-radius: 0 0 20px 20px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  &:hover {
-    background-color: darken(#cdd3d2dc, 2%);
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
   }
 }
