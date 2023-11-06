@@ -14,17 +14,18 @@
       border-radius: 20px;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
-      &:hover {
-        background-color: darken(#cdd3d2dc, 2%);
-      }
       &.active {
         background-color: #3a3939;
         color: #fff;
       }
-
       h3 {
         position: relative;
         top: 6px;
+      }
+    }
+    @media (hover: hover) {
+      li:hover {
+        background-color: darken(#d6d8d8dc, 2%);
       }
     }
   }

@@ -37,11 +37,12 @@
         transition: background-color 0.1s ease-in-out;
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
-        &:hover {
+      }
+      @media (hover: hover) {
+        li:hover {
           background-color: darken(#d6d8d8dc, 2%);
         }
       }
-
       img {
         width: 20px;
         height: 20px;
