@@ -31,7 +31,6 @@ export const Pagination: FC<CategoriesProps> = ({
       onPageChange={(event) => onChangePage(event.selected + 1)}
       pageRangeDisplayed={pageRange}
       pageCount={pageCount}
-      forcePage={currentPage - 1}
     />
   );
 };
