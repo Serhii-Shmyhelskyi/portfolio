@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import Logo from "../../assets/img/logo.jpg";
 import Photo from "../../assets/img/serhii.jpg";
@@ -6,7 +6,7 @@ import Photo from "../../assets/img/serhii.jpg";
 import styles from "./header.module.scss";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <>
       <div className={styles.header_top}>

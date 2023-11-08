@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { pageUp } from "../function/function";
 
 import styles from "./footer.module.scss";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <>
       <div className={styles.footer} onClick={pageUp}>

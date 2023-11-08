@@ -5,9 +5,18 @@ import { useGetAllGoodsQuery } from "../../redux/slices/contentSlice";
 import styles from "./pagination.module.scss";
 
 import { pageUp } from "../function/function";
+import { FC } from "react";
 
-export const Pagination = ({ currentPage, onChangePage }) => {
-  const { data: allGoods = [] } = useGetAllGoodsQuery();
+type CategoriesProps = {
+  currentPage: number;
+  onChangePage: (number: number) => void;
+};
+
+export const Pagination: FC<CategoriesProps> = ({
+  currentPage,
+  onChangePage,
+}) => {
+  const { data: allGoods = [] } = useGetAllGoodsQuery(currentPage);
 
   let pageRange = 6;
   //кількість карток на сторінці

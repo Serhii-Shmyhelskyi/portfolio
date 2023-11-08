@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 
 import FsLightbox from "fslightbox-react";
 
@@ -8,17 +8,17 @@ import mePaton from "../../assets/img/me_paton.jpg";
 import { NTKPhoto } from "../../components/data/data";
 import { CinaPhoto } from "../../components/data/data";
 
-const Me = () => {
+const Me: FC = () => {
   const [toggler, setToggler] = useState(false);
   const [toggler2, setToggler2] = useState(false);
   const [indexPhoto, setIndexPhoto] = useState(0);
   const [indexPhoto2, setIndexPhoto2] = useState(0);
 
-  const openLightbox = (index) => {
+  const openLightbox = (index: number) => {
     setIndexPhoto(index); // Встановлюємо індекс зображення
     setToggler((toggler) => !toggler);
   };
-  const openLightbox2 = (index2) => {
+  const openLightbox2 = (index2: number) => {
     setIndexPhoto2(index2); // Встановлюємо індекс зображення
     setToggler2((toggler2) => !toggler2);
   };
@@ -30,13 +30,13 @@ const Me = () => {
         Hello, my name is Serhii Shmyhelskiy. Implemented projects by attending
         HTML and CSS courses (used JS, SCSS, CSS Animations, Gulp technologies).
         I developed a photographer's portfolio site. Developed my portfolio site
-        using ReactJS, Redux Toolkit, RTK Query, React Router 6, Axios, SCSS.
-        Completed pet projects Varenuk store (ReactJS, Redux Toolkit,
-        TypeScript, React Router 6, Axios, SCSS), Sneakers store (ReactJS, React
-        Router 6, Axios, React Context, SCSS), website with a quiz What kind of
-        mushroom are you? (ReactJS, Redux Toolkit, React Router 6, Axios, SCSS),
-        site about Kyiv (ReactJS, Redux Toolkit, React Router 6, TypeScript,
-        SCSS), to do list (ReactJS, Axios, SCSS).
+        using ReactJS, Redux Toolkit, RTK Query, React Router 6, Axios,
+        TypeScript, SCSS. Completed pet projects Varenuk store (ReactJS, Redux
+        Toolkit, TypeScript, React Router 6, Axios, SCSS), Sneakers store
+        (ReactJS, React Router 6, Axios, React Context, SCSS), website with a
+        quiz What kind of mushroom are you? (ReactJS, Redux Toolkit, React
+        Router 6, Axios, SCSS), site about Kyiv (ReactJS, Redux Toolkit, React
+        Router 6, TypeScript, SCSS), to do list (ReactJS, Axios, SCSS).
       </p>
       <h2>Education</h2>
       <div className={styles.me_kpi}>

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./errorComponent.module.scss";
 import { useRouteError } from "react-router-dom";
 
-const ErrorComponent = () => {
+const ErrorComponent: FC = () => {
   const error = useRouteError();
   console.error(error);
   return (

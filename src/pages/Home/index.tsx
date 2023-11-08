@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 
 import { useGetGoodsQuery } from "../../redux/slices/contentSlice";
 
@@ -9,12 +9,14 @@ import { photoArr } from "../../components/data/data";
 import styles from "./content.module.scss";
 import ErrorComponent from "../../components/ErrorComponent";
 
-const Home = () => {
+const Home: FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
+
   const { data: goods = [], isLoading, error } = useGetGoodsQuery(currentPage);
 
   const skeletons = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
-  const contents = goods.map((obj, i) => {
+
+  const contents = goods.map((obj, i: number) => {
     return (
       <div key={i} className={styles.content_boxContent}>
         <a href={obj.siteUrl} target="_blank">

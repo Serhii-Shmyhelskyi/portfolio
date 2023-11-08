@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import ContentLoader from "react-content-loader";
 
-export const Skeleton = () => (
+export const Skeleton: FC = () => (
   <div className="wrapper">
     <ContentLoader
       speed={0}

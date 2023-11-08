@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: ["@babel/polyfill", "./src/index.jsx"], //.tsx якщо використовувати TypScript
+  entry: ["@babel/polyfill", "./src/index.tsx"], //.tsx якщо використовувати TypScript
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].js",

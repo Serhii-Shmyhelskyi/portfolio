@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import classnames from "classnames";
 
 import { Link, useLocation } from "react-router-dom";
 import styles from "./menu.module.scss";
 import { pageUp } from "../function/function";
 
-const Menu = () => {
+const Menu: FC = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
 
-  const AllActive = (toggleMenu) => {
+  const AllActive = (toggleMenu: boolean) => {
     setToggleMenu((actualTogleMenu) => !actualTogleMenu);
     window.matchMedia("(max-width: 450px)").matches && toggleMenu
       ? (document.body.style.overflow = "hidden")
@@ -17,6 +17,12 @@ const Menu = () => {
   };
 
   let toogle = !toggleMenu && styles.menu__toggleRight;
+
+  type menuItem = {
+    name: string;
+    link: string;
+    pathnameId: string;
+  };
 
   let itemMenus = [
     { name: "Home", link: "/portfolio/", pathnameId: "/portfolio/" },
@@ -27,7 +33,8 @@ const Menu = () => {
 
   let location = useLocation();
 
-  let isActiveMenu = (button) => location.pathname === button.pathnameId;
+  let isActiveMenu = (button: menuItem) =>
+    location.pathname === button.pathnameId;
 
   return (
     <>
