@@ -27,8 +27,11 @@ const Menu: FC = () => {
   let itemMenus = [
     { name: "Home", link: "/portfolio/", pathnameId: "/portfolio/" },
     { name: "About me", link: "me", pathnameId: "/portfolio/me" },
-    // { name: "Blog", link: "blog" },
-    // { name: "Contacts", link: "contacts" },
+    {
+      name: "My old works",
+      link: "oldWorks",
+      pathnameId: "/portfolio/oldWorks",
+    },
   ];
 
   let location = useLocation();
