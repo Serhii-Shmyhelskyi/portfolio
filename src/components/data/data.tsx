@@ -27,6 +27,7 @@ import photoSite9 from "../../assets/img/imageSite9.jpg";
 import photoSite10 from "../../assets/img/imageSite10.jpg";
 import photoSite11 from "../../assets/img/imageSite11.jpg";
 import photoSite12 from "../../assets/img/imageSite12.jpg";
+import photoSite13 from "../../assets/img/imageSite13.jpg";
 
 export const NTKPhoto = [NTK1, NTK2, NTK3, NTK4, NTK5, NTK6];
 
@@ -55,4 +56,5 @@ export const photoArr = [
   photoSite10,
   photoSite11,
   photoSite12,
+  photoSite13,
 ];

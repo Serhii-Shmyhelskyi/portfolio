@@ -23,7 +23,7 @@ const Header: FC = () => {
                 <li>
                   <img
                     src="https://img.icons8.com/ios-filled/256/phone.png"
-                    alt="email"
+                    alt="phone"
                   />
                   <p className={styles.header_gh}>+380966265268</p>
                 </li>
@@ -32,7 +32,7 @@ const Header: FC = () => {
                 <li>
                   <img
                     src="https://img.icons8.com/external-nawicon-glyph-nawicon/256/external-email-communication-nawicon-glyph-nawicon.png"
-                    alt="phone"
+                    alt="email"
                   />
                   <p className={styles.header_gh}>shmserhi@gmail.com</p>
                 </li>
