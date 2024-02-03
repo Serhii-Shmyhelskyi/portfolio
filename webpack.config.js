@@ -8,8 +8,13 @@ module.exports = {
   entry: ["@babel/polyfill", "./src/index.tsx"], //.tsx якщо використовувати TypScript
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].[hash].js",
+    filename: "[name].[fullhash].js",
   },
+  // performance: {
+  //   hints: false,
+  //   maxEntrypointSize: 512000,
+  //   maxAssetSize: 512000,
+  // },
   devServer: {
     port: 3000,
     historyApiFallback: true,
